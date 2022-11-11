@@ -2,19 +2,14 @@ import { useEffect, useState } from "react";
 import "./App.scss";
 import DrumPad from "./components/DrumPad";
 import dataDrumPad from "./data/DrumPad";
+import Footer from "./components/footer.jsx";
 
 function App() {
   const [drumKey, setDrumKey] = useState("");
 
-  const findId = () => {
-    dataDrumPad.filter((elem) => {
-      return console.log(elem.id);
-    });
-  };
-
   useEffect(() => {
     document.addEventListener("keydown", (event) => {
-      start(event.key.toUpperCase(), findId());
+      start(event.key.toUpperCase());
     });
   }, []);
 
@@ -46,6 +41,7 @@ function App() {
           })}
         </div>
       </div>
+      <Footer></Footer>
     </div>
   );
 }
