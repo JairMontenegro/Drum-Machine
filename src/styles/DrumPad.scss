@@ -1,16 +1,4 @@
-// provisorio
-#drum-machine{
-    display: flex;
-    width: 400px;
-    height: 400px;
-    background-color: blue;
-    margin: 2rem auto 0;
-    padding: 1rem;
-    justify-content: center;
-    align-items: center;
-}
-
-
+@use '../index';
 
 .container{
     display: grid;
@@ -18,6 +6,7 @@
 }
 
 .drum-pad{
+
     background-color: gray ;
     border: 1px solid black;
     width: 100px;

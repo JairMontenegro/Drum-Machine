@@ -1,7 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+
+$font-family-display-pad: 'Nova Square', sans-serif;
+
 *{
+
 margin: 0;
 padding: 0;
 box-sizing: border-box;
+
+
+
 }
 
 
@@ -11,9 +19,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #ddd;
+
+
+ 
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+ 
 }

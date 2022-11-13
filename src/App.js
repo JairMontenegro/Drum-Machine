@@ -22,7 +22,9 @@ function App() {
   return (
     <div className="App">
       <div id="drum-machine">
-        <div id="display">{drumKey}</div>
+        <div id="display">
+          <p>{drumKey}</p>
+        </div>
         <div className="container">
           {dataDrumPad.map((element) => {
             return (
