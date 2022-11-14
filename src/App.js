@@ -3,13 +3,18 @@ import "./App.scss";
 import DrumPad from "./components/DrumPad";
 import dataDrumPad from "./data/DrumPad";
 import Footer from "./components/footer.jsx";
+import { findRenderedComponentWithType } from "react-dom/test-utils";
 
 function App() {
   const [drumKey, setDrumKey] = useState("");
 
   useEffect(() => {
     document.addEventListener("keydown", (event) => {
-      start(event.key.toUpperCase());
+      const transform = event.key.toUpperCase();
+      const searchId = dataDrumPad.map((find) => {
+        return find.drumKey === transform ? find.id : "";
+      });
+      start(transform, searchId);
     });
   }, []);
 

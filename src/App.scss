@@ -1,4 +1,4 @@
-@use "index";
+@use "./styles/variables";
 
 
 #drum-machine{
@@ -22,7 +22,7 @@
     box-shadow: 0 0 10px #555 inset;
     overflow: hidden;
     p{  
-        font-family: index.$font-family-display-pad;    
+        font-family: variables.$fontPad;    
         font-size:2em;
         color: #3FAEFD;
         text-transform: uppercase;

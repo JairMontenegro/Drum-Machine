@@ -1,4 +1,4 @@
-@use '../index';
+@use '../styles/variables';
 
 .container{
     display: grid;
@@ -6,7 +6,7 @@
 }
 
 .drum-pad{
-
+    font-family: variables.$fontPad;
     background-color: gray ;
     border: 1px solid black;
     width: 100px;
