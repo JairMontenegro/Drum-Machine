@@ -3,17 +3,22 @@
 
 #drum-machine{
     display: flex;
-    width: 700px;
+    width: 750px;
     height: 560px;
     background-color: black; // provisorio
     margin: 3rem auto 0;
     padding: 1rem;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 
 #display{
+    position: absolute;
+    top:2em;
+    right: 13em;
     width: 270px;
     height: 60px;
     background-color: #000;
@@ -22,8 +27,10 @@
     box-shadow: 0 0 10px #555 inset;
     overflow: hidden;
     p{  
-        font-family: variables.$fontPad;    
-        font-size:2em;
+        font-family: variables.$fontPad;
+        text-align: center;
+        line-height: 1.8;    
+        font-size: 2em;
         color: #3FAEFD;
         text-transform: uppercase;
         white-space: nowrap;
