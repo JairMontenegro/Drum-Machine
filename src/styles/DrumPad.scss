@@ -1,17 +1,78 @@
 @use '../styles/variables';
 
+
 .container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: .5em;
+        #heater-1,#heater-2,#heater-3,#heater-4{
+            color: variables.$color-heaters;
+            background-color: black;
+            border: 4px  outset  variables.$color-heaters ;
+            box-shadow: .19em .19em  variables.$color-heaters;
+            &:active{
+                color: #000;
+                background:linear-gradient(214deg, rgba(244,158,158,1) 0%, rgba(251,108,145,1) 100%);
+                box-shadow: .19em .19em  #000;
+            }
+        }
+        #clap{
+            color: variables.$color-clap;
+            background-color: black;
+            border: 4px  outset  variables.$color-clap;
+            box-shadow: .19em .19em  variables.$color-clap;
+            &:active{
+                color: #000;
+                background:linear-gradient(214deg, rgba(154,252,255,1) 0%, rgba(83,202,254,1) 100%);
+                box-shadow: .19em .19em  #000;
+            }
+            
+        }
+        #open-hh{
+            color: variables.$color-open;
+            background-color: black;
+            border: 4px  outset  variables.$color-open;
+            box-shadow: .19em .19em  variables.$color-open;
+            &:active{
+                color: #000;
+                background: linear-gradient(214deg, rgba(244,233,250,1) 0%, rgba(227,178,253,1) 100%);
+                box-shadow: .19em .19em  #000;
+            }
+        }
+        #kicknhat, #kick{
+            color: variables.$color-kicks;
+            background-color: black;
+            border: 4px  outset  variables.$color-kicks;
+            box-shadow: .19em .19em  variables.$color-kicks;
+            &:active{
+                color: #000;
+                background: linear-gradient(214deg, rgba(255,230,189,1) 0%, rgba(254,202,119,1) 100%);
+                box-shadow: .19em .19em  #000;
+            }
+        }
+        #closed-hh{
+            color: variables.$color-closed;
+            background-color: black;
+            border: 4px  outset  variables.$color-closed;
+            box-shadow: .19em .19em  variables.$color-closed;
+            &:active{
+                color: #000;
+                background: linear-gradient(214deg, rgba(174,166,255,1) 0%, rgba(110,95,255,1) 100%);
+                box-shadow: .19em .19em  #000;
+            }
+            
+        }
+
 }
 
 .drum-pad{
     font-family: variables.$fontPad;
-    background-color: gray ;
-    border: 1px solid black;
+    border-radius: 10%;
+    padding: .3em;
+    font-size: 1.8em;
     width: 100px;
     height: 100px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    align-items: start;    
 }

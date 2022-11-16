@@ -3,7 +3,6 @@ import "./App.scss";
 import DrumPad from "./components/DrumPad";
 import dataDrumPad from "./data/DrumPad";
 import Footer from "./components/footer.jsx";
-import { findRenderedComponentWithType } from "react-dom/test-utils";
 
 function App() {
   const [drumKey, setDrumKey] = useState("");
@@ -48,7 +47,7 @@ function App() {
           })}
         </div>
       </div>
-      <Footer></Footer>
+      <Footer />
     </div>
   );
 }
