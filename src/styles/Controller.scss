@@ -1,0 +1,54 @@
+@use '../styles/variables';
+
+
+
+.controller{
+    display: flex;
+    flex-direction: column;
+    width: 332px;
+    height: 332px;
+
+    .turn{
+        font-family: variables.$fontPad;
+        text-transform: uppercase;
+        width: 4.125rem;
+        height: 1.56rem;
+        background-color: #999;
+        border: 4px  outset  darkred;
+        box-shadow: .1rem .1rem .4rem darkred;
+        color: variables.$color-closed;
+        margin-bottom: 2em;
+        
+    }
+
+
+
+    #display{
+        width: 270px;
+        height: 60px;
+        background-color: #000;
+        border-radius: 5px;
+        border: 2px solid #333;
+        box-shadow: 0 0 10px #555 inset;
+        overflow: hidden;
+        margin: 0 auto;
+        p{  
+            font-family: variables.$fontPad;
+            text-align: center;
+            line-height: 1.8;    
+            font-size: 2em;
+            color: #3FAEFD;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+    }
+
+    .volume-text{
+        text-transform: uppercase;
+        font-family: variables.$fontPad;
+        color: #3FAEFD;
+    }
+    
+    
+}
+

@@ -3,8 +3,10 @@ import "./App.scss";
 import DrumPad from "./components/DrumPad";
 import dataDrumPad from "./data/DrumPad";
 import Footer from "./components/footer.jsx";
+import Controller from "./components/Controller";
 
 function App() {
+  const [volume, setVolume] = useState(1);
   const [drumKey, setDrumKey] = useState("");
 
   useEffect(() => {
@@ -21,14 +23,14 @@ function App() {
     const audio = document.getElementById(identifier);
     audio.play();
     setDrumKey(drumId);
+
+    // const handleVolumeChange = () => {};
   };
 
   return (
     <div className="App">
       <div id="drum-machine">
-        <div id="display">
-          <p>{drumKey}</p>
-        </div>
+        <Controller drumKey={drumKey} volume={volume} />
         <div className="container">
           {dataDrumPad.map((element) => {
             return (
