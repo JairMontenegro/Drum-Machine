@@ -5,8 +5,10 @@
 .controller{
     display: flex;
     flex-direction: column;
-    width: 332px;
-    height: 332px;
+    width: 21rem;
+    height: 21rem;
+    gap : 2rem;
+
 
     .turn{
         font-family: variables.$fontPad;
@@ -24,8 +26,8 @@
 
 
     #display{
-        width: 270px;
-        height: 60px;
+        width: 17rem;
+        height: 4rem;
         background-color: #000;
         border-radius: 5px;
         border: 2px solid #333;
@@ -42,13 +44,28 @@
             white-space: nowrap;
         }
     }
+    
+    .display-controller{
+      width: 10rem;
+      height: 2rem;
+      background-color: #000;
+      border-radius: 5px;
+      border: 2px solid #333;
+      box-shadow: 0 0 10px #555 inset;
+      overflow: hidden;
+      margin: 0 auto;
 
-    .volume-text{
+      .volume-text{
+        text-align: center;
+        line-height: 1.8;
         text-transform: uppercase;
         font-family: variables.$fontPad;
         color: #3FAEFD;
     }
     
+
+    }
+
     
 }
 

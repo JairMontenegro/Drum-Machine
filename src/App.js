@@ -6,7 +6,7 @@ import Footer from "./components/footer.jsx";
 import Controller from "./components/Controller";
 
 function App() {
-  const [volume, setVolume] = useState(1);
+  const [volume, setVolume] = useState(1.0);
   const [drumKey, setDrumKey] = useState("");
 
   useEffect(() => {
@@ -23,14 +23,26 @@ function App() {
     const audio = document.getElementById(identifier);
     audio.play();
     setDrumKey(drumId);
+  };
 
-    // const handleVolumeChange = () => {};
+  const handleVolumeChange = (event) => {
+    setVolume(event.target.value);
+  };
+
+  const bindVolume = () => {
+    const audioVolume = dataDrumPad.map((find) => find.drumKey);
+    audioVolume.volume = volume;
   };
 
   return (
     <div className="App">
       <div id="drum-machine">
-        <Controller drumKey={drumKey} volume={volume} />
+        <Controller
+          bindVolume={bindVolume()}
+          drumKey={drumKey}
+          volume={volume}
+          handleVolumeChange={handleVolumeChange}
+        />
         <div className="container">
           {dataDrumPad.map((element) => {
             return (

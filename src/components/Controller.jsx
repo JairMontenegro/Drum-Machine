@@ -1,19 +1,15 @@
 import React from "react";
 import "../styles/Controller.scss";
 
-const Controller = ({ drumKey, volume, handleVolumeChange }) => {
+const Controller = (props) => {
+  const { drumKey, volume, handleVolumeChange, power } = props;
   return (
     <div className="controller">
-      <button className="turn">on/off</button>
+      <button className="turn">{power ? "OFF" : "ON"}</button>
       <div id="display">
         <p>{drumKey}</p>
       </div>
-      <label orient="270deg" type="range" for="band" before="-5" after="5">
-        0
-      </label>
-
       <input
-        orient="270deg"
         className="volume"
         max="1"
         min="0"
@@ -22,7 +18,9 @@ const Controller = ({ drumKey, volume, handleVolumeChange }) => {
         value={volume}
         onChange={handleVolumeChange}
       />
-      <p className="volume-text">Volume: %{Math.round(volume * 100)}</p>
+      <div className="display-controller">
+        <p className="volume-text">Volume: %{Math.round(volume * 100)}</p>
+      </div>
     </div>
   );
 };
