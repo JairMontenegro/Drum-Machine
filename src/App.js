@@ -29,16 +29,10 @@ function App() {
     setVolume(event.target.value);
   };
 
-  const bindVolume = () => {
-    const audioVolume = dataDrumPad.map((find) => find.drumKey);
-    audioVolume.volume = volume;
-  };
-
   return (
     <div className="App">
       <div id="drum-machine">
         <Controller
-          bindVolume={bindVolume()}
           drumKey={drumKey}
           volume={volume}
           handleVolumeChange={handleVolumeChange}
@@ -54,6 +48,7 @@ function App() {
                 onClickSound={() => {
                   start(element.drumKey, element.id);
                 }}
+                volume={volume}
               >
                 {element.drumKey}
               </DrumPad>

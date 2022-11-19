@@ -3,6 +3,7 @@ import "../styles/Controller.scss";
 
 const Controller = (props) => {
   const { drumKey, volume, handleVolumeChange, power } = props;
+
   return (
     <div className="controller">
       <button className="turn">{power ? "OFF" : "ON"}</button>
