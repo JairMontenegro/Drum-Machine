@@ -5,7 +5,9 @@ const DrumPad = (props) => {
 
   const handleVolume = (identifier) => {
     const audioVolume = document.getElementById(identifier);
-    audioVolume.volume = volume;
+    if (audioVolume) {
+      audioVolume.volume = volume;
+    }
   };
 
   return (

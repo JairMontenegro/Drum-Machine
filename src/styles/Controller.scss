@@ -1,4 +1,5 @@
 @use '../styles/variables';
+@import "./mixin";
 
 
 
@@ -7,65 +8,37 @@
     flex-direction: column;
     width: 21rem;
     height: 21rem;
-    gap : 2rem;
+    gap : 1rem;
 
 
-    .turn{
-        font-family: variables.$fontPad;
-        text-transform: uppercase;
-        width: 4.125rem;
-        height: 1.56rem;
-        background-color: #999;
-        border: 4px  outset  darkred;
-        box-shadow: .1rem .1rem .4rem darkred;
-        color: variables.$color-closed;
-        margin-bottom: 2em;
-        
+    .ON {
+        @include onOff(#66fbd6, #ccc);
+    }
+    .OFF{
+        @include onOff( #ff5252, #999);
     }
 
+    input[type=range][orient=vertical]
+          {
+            -webkit-appearance: slider-vertical; 
+            width: 100%;
+            margin: 18px 0;
+            background-color: transparent;
+      }
 
-
-    #display{
-        width: 17rem;
-        height: 4rem;
-        background-color: #000;
-        border-radius: 5px;
-        border: 2px solid #333;
-        box-shadow: 0 0 10px #555 inset;
-        overflow: hidden;
-        margin: 0 auto;
-        p{  
-            font-family: variables.$fontPad;
-            text-align: center;
-            line-height: 1.8;    
-            font-size: 2em;
-            color: #3FAEFD;
-            text-transform: uppercase;
-            white-space: nowrap;
+      #display{
+        @include displays(17rem, 4rem, 1.1rem);
+            p{  
+              @include pElements(1.4 , 2em)
+            }
+      }
+    
+      .display-controller{
+        @include displays (10rem, 2rem, .5rem);
+          .volume-text{
+            @include pElements(1.4, 1em)
         }
-    }
-    
-    .display-controller{
-      width: 10rem;
-      height: 2rem;
-      background-color: #000;
-      border-radius: 5px;
-      border: 2px solid #333;
-      box-shadow: 0 0 10px #555 inset;
-      overflow: hidden;
-      margin: 0 auto;
-
-      .volume-text{
-        text-align: center;
-        line-height: 1.8;
-        text-transform: uppercase;
-        font-family: variables.$fontPad;
-        color: #3FAEFD;
-    }
-    
 
     }
-
-    
 }
 

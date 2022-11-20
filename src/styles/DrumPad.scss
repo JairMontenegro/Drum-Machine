@@ -1,4 +1,5 @@
 @use '../styles/variables';
+@import './mixin';
 
 
 .container{
@@ -6,66 +7,20 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
         #heater-1,#heater-2,#heater-3,#heater-4{
-            color: variables.$color-heaters;
-            background-color: #000;
-            border: 4px  outset  variables.$color-heaters ;
-            box-shadow: .4rem .4rem .4rem  variables.$color-heaters;
-            transition: all .1s ease-in;
-            &:active{
-                color: #000;
-                background: radial-gradient(circle, rgba(247,170,170,1) 9%, rgba(251,108,145,1) 95%);
-                box-shadow: .2rem .2rem  #000;
-                
-            }
+            @include drumPad(variables.$color-heaters,rgba(247,170,170,1),rgba(251,108,145,1));
         }
         #clap{
-            color: variables.$color-clap;
-            background-color: #000;
-            border: 4px  outset  variables.$color-clap;
-            box-shadow: .4rem .4rem .4rem  variables.$color-clap;
-            transition: all .1s ease-in;
-            &:active{
-                color: #000;
-                background: radial-gradient(circle, rgba(175,224,245,1) 9%, rgba(83,202,254,1) 95%);
-                box-shadow: .19rem .19rem  #000;
-            }
-            
+            @include drumPad(variables.$color-clap,rgba(175,224,245,1),rgba(83,202,254,1));
         }
         #open-hh{
-            color: variables.$color-open;
-            background-color: #000;
-            border: 4px  outset  variables.$color-open;
-            box-shadow: .4rem .4rem .4rem variables.$color-open;
-            transition: all .1s ease-in;
-            &:active{
-                color: #000;
-                background: radial-gradient(circle, rgba(236,214,249,1) 20%, rgba(227,178,253,1) 95%);
-                box-shadow: .19rem .19rem  #000;
-            }
+            @include drumPad(variables.$color-open,rgba(236,214,249,1),rgba(236,214,249,1));
+            
         }
         #kicknhat, #kick{
-            color: variables.$color-kicks;
-            background-color: #000;
-            border: 4px  outset  variables.$color-kicks;
-            box-shadow: .4rem .4rem .4rem variables.$color-kicks;
-            transition: all .1s ease-in;
-            &:active{
-                color: #000;
-                background: radial-gradient(circle, rgba(247,228,197,1) 20%, rgba(254,202,119,1) 95%);
-                box-shadow: .19rem .19rem  #000;
-            }
+            @include drumPad(variables.$color-kicks,rgba(247,228,197,1),rgba(254,202,119,1));
         }
         #closed-hh{
-            color: variables.$color-closed;
-            background-color: #000;
-            border: 4px  outset  variables.$color-closed;
-            box-shadow: .4rem .4rem .4rem variables.$color-closed;
-            transition: all .1s ease-in;
-            &:active{
-                color: #000;
-                background:radial-gradient(circle, rgba(193,187,255,1) 0%, rgba(110,95,255,1) 100%);
-                box-shadow: .19rem .19rem  #000;
-            }
+            @include drumPad(variables.$color-closed,rgba(193,187,255,1),rgba(110,95,255,1));
             
         }
 

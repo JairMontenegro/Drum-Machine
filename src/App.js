@@ -8,6 +8,7 @@ import Controller from "./components/Controller";
 function App() {
   const [volume, setVolume] = useState(1.0);
   const [drumKey, setDrumKey] = useState("");
+  const [on, setOn] = useState(true);
 
   useEffect(() => {
     document.addEventListener("keydown", (event) => {
@@ -29,10 +30,16 @@ function App() {
     setVolume(event.target.value);
   };
 
+  const turnOff = () => {
+    setOn(!on);
+  };
+
   return (
     <div className="App">
       <div id="drum-machine">
         <Controller
+          turnOff={turnOff}
+          turn={on}
           drumKey={drumKey}
           volume={volume}
           handleVolumeChange={handleVolumeChange}
