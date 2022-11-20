@@ -56,8 +56,9 @@ function App() {
                   start(element.drumKey, element.id);
                 }}
                 volume={volume}
+                onButton={on}
               >
-                {element.drumKey}
+                {element.drumKey}{" "}
               </DrumPad>
             );
           })}

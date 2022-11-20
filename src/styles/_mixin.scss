@@ -54,3 +54,12 @@
 
 
 }
+
+
+@mixin none ($mainColor, $activeColorOne, $activeColorTwo ){
+  color: $mainColor; 
+  background-color: #000;
+  border: 4px  outset  $mainColor ;
+  transition: all 1s ease-out;
+
+  }

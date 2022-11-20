@@ -10,7 +10,7 @@ const Controller = (props) => {
         {turn ? "OFF" : "ON"}
       </button>
       <div id="display">
-        <p>{drumKey}</p>
+        <p>{turn ? "turn on" : drumKey}</p>
       </div>
       <input
         orient="vertical"

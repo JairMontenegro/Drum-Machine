@@ -24,6 +24,10 @@
             
         }
 
+        #none{
+            @include none(#ccc, rgba(247,170,170,1),rgba(251,108,145,1));
+        }
+
 }
 
 .drum-pad{
