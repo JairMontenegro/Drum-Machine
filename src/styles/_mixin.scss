@@ -1,4 +1,4 @@
-// MIXIN FOR CONTROLLER 
+// CONTROLLER'S MIXINS
 @mixin onOff($colorButton, $background ) {
     font-family: variables.$fontPad;
     text-transform: uppercase;
@@ -37,14 +37,14 @@
   text-transform: uppercase;
 }
 
-// MIXIN FOR DRUMPAD
+// DRUMPAD'S MIXIN
 
-@mixin drumPad($mainColor, $activeColorOne, $activeColorTwo ){
+@mixin drumPad($mainColor, $activeColorOne, $activeColorTwo, $duration  ){
   color: $mainColor; 
   background-color: #000;
   border: 4px  outset  $mainColor ; 
   box-shadow: .4rem .4rem .4rem  $mainColor;
-  transition: all .1s ease-in;
+  transition: all $duration ease-in;
   &:active{
       color: #000;
       background: radial-gradient(circle, $activeColorOne 9%, $activeColorTwo 95%);

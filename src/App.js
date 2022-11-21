@@ -4,6 +4,7 @@ import DrumPad from "./components/DrumPad";
 import dataDrumPad from "./data/DrumPad";
 import Footer from "./components/footer.jsx";
 import Controller from "./components/Controller";
+import fileAudio from "./sound/start.mp3";
 
 function App() {
   const [volume, setVolume] = useState(1.0);
@@ -30,8 +31,13 @@ function App() {
     setVolume(event.target.value);
   };
 
+  const startAudio = new Audio(fileAudio);
+
   const turnOff = () => {
     setOn(!on);
+    if (on) {
+      startAudio.play();
+    }
   };
 
   return (
@@ -58,7 +64,7 @@ function App() {
                 volume={volume}
                 onButton={on}
               >
-                {element.drumKey}{" "}
+                {element.drumKey}
               </DrumPad>
             );
           })}
