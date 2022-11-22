@@ -18,18 +18,12 @@
         @include onOff( #ff5252, #999);
     }
 
-    input[type=range][orient=vertical]
-          {
-            -webkit-appearance: slider-vertical; 
-            width: 100%;
-            margin: 18px 0;
-            background-color: transparent;
-      }
+        @include range;
 
       #display{
         @include displays(17rem, 4rem, 1.1rem);
             p{  
-              @include pElements(1.4 , 2em);
+              @include pElements(1.6 , 2.3em);
               position: relative;
               animation: change 5s linear 2s infinite alternate;
             }
@@ -38,7 +32,7 @@
       .display-controller{
         @include displays (10rem, 2rem, .5rem);
           .volume-text{
-            @include pElements(1.4, 1em)
+            @include pElements(1.7, 1em)
         }
 
     }

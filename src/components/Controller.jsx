@@ -13,7 +13,7 @@ const Controller = (props) => {
         <p>{turn ? "turn on" : drumKey}</p>
       </div>
       <input
-        orient="vertical"
+        orient="270"
         className="volume"
         max="1"
         min="0"
