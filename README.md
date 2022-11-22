@@ -1,6 +1,6 @@
 DRUM MACHINE || "CAJA DE RITMOS"
 
-![CAPTURE](/src/img/Random-quote.png "APP SCREENSHOT")
+![CAPTURE](/src/img/drum-machine.png "APP SCREENSHOT")
 
 :us:
 
