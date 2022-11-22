@@ -29,7 +29,9 @@
       #display{
         @include displays(17rem, 4rem, 1.1rem);
             p{  
-              @include pElements(1.4 , 2em)
+              @include pElements(1.4 , 2em);
+              position: relative;
+              animation: change 5s linear 2s infinite alternate;
             }
       }
     
@@ -40,5 +42,13 @@
         }
 
     }
+
+    @keyframes change {
+      0%  {left: -210px;}
+      100% {left: 210px}
+
+      
+    }
 }
+
 

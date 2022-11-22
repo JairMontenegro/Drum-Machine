@@ -20,7 +20,7 @@
 @mixin displays($width, $height, $borRadius, ){
   width: $width;
   height: $height;
-  background-color: #000;
+  background-color: transparent;
   border-radius: $borRadius;
   border: 2px solid #333;
   box-shadow: 0 0 10px #555 inset;
@@ -49,6 +49,7 @@
       color: #000;
       background: radial-gradient(circle, $activeColorOne 9%, $activeColorTwo 95%);
       box-shadow: .2rem .2rem  #000;
+      transition: all .2s ease-in;
       
   }
 
