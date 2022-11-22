@@ -37,12 +37,10 @@
 
     }
 
-    @keyframes change {
-      0%  {left: -210px;}
-      100% {left: 210px}
-
-      
-    }
+        @keyframes change {
+          0%   {left: -210px;}
+          100% {left: 210px;}
+        }
 }
 
 
